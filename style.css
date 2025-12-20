@@ -529,34 +529,23 @@ footer p a {
 /* ===== CELULAR ===== */
 @media screen and (max-width: 480px) {
 
-    header {
-        padding: 10px 4%;
+    .topo-do-site {
+        padding-top: 100px;
     }
 
-    h1 {
-        font-size: 1.6rem;
-        line-height: 1.2;
+    .txt-topo-site h1 {
+        font-size: 26px;
+        line-height: 1.25;
+        margin-bottom: 16px;
     }
 
     .txt-topo-site p {
-        font-size: 0.88rem;
+        font-size: 14px;
+        line-height: 1.6;
     }
 
-    .tech-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .especialidades-box {
-        padding: 20px;
-    }
-
-    .btn-social {
-        justify-content: center;
-    }
-
-    footer p {
-        font-size: 0.9rem;
+    .img-topo-site img {
+        width: 220px;
     }
 }
-
 
