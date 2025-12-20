@@ -559,8 +559,15 @@ footer p a {
 }
 /* ===== CELULAR ===== */
 @media screen and (max-width: 480px) {
+
   .topo-do-site {
     padding-top: 100px;
+  }
+
+    .sobre img {
+    width: 220px;   /* diminui a imagem */
+    max-width: 100%;
+    height: auto;
   }
 
   .txt-topo-site h1 {
