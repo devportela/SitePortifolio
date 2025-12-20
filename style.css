@@ -480,6 +480,13 @@ footer p a {
     .tech-grid {
         grid-template-columns: repeat(3, 1fr);
     }
+     .sobre .btn-social {
+        justify-content: center;
+        margin-top: 20px;
+    }
+    footer .btn-social {
+        justify-content: center;
+    }
 }
 /* ===== TABLET ===== */
 @media screen and (max-width: 768px) {
