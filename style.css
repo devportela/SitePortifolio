@@ -361,6 +361,15 @@ section.portfolio .flex {
   cursor: pointer;
   border-radius: 40px;
   position: relative;
+  overflow: hidden;
+}
+.video-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 40px;
 }
 
 .img-port:hover {
@@ -372,19 +381,46 @@ section.portfolio .flex {
   inset: 0;
   background-color: rgba(11, 15, 20, 0.9);
   border-radius: 40px;
+
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
-  font-weight: 600;
-  color: var(--azul-glow);
+  text-align: center;
+
+  padding: 30px;
+  gap: 12px;
+
   opacity: 0;
-  transition: 0.5s;
+  transition: 0.4s ease;
 }
 
 .img-port:hover .overlay {
   opacity: 1;
 }
+
+.overlay h3 {
+  font-size: 22px;
+  color: var(--branco);
+}
+
+.overlay p {
+  font-size: 14px;
+  color: var(--cinza);
+  line-height: 1.4;
+}
+
+.overlay span {
+  font-size: 13px;
+  color: var(--azul-glow);
+  letter-spacing: 0.5px;
+}
+
+.img-port:hover .overlay {
+  opacity: 1;
+}
+
+
 
 /* ===== FORMULÁRIO ===== */
 section.formulario {
@@ -585,3 +621,51 @@ footer p a {
     width: 220px;
   }
 }
+
+/* ===== PORTFÓLIO MOBILE ===== */
+@media screen and (max-width: 768px) {
+
+  .img-port {
+    width: 100%;
+    max-width: 360px;
+    height: 420px;
+    margin: 0 auto;
+  }
+
+  /* pausa o vídeo no mobile */
+  .video-bg {
+    display: none;
+  }
+
+  /* fallback com imagem */
+  .img-port {
+    background-image: url(images/imagem.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* overlay sempre visível no mobile */
+  .overlay {
+    opacity: 1;
+    background-color: rgba(11, 15, 20, 0.85);
+    text-align: center;
+    padding: 20px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .overlay h3 {
+    font-size: 20px;
+  }
+
+  .overlay p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .overlay span {
+    font-size: 13px;
+    color: var(--cinza);
+  }
+}
+
